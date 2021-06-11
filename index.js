@@ -20,7 +20,7 @@ app.use("/user", userRouter)
 app.get('/', (req, res) => {
     res.send('Hello to Books API')
 })
-const CONNECTION_URL = 'mongodb://axcessbook:Medbus2020@krishnaneupaney-mongo-production/myFirstDatabase'
+const CONNECTION_URL = 'mongodb://axcessbook:Medbus2020@krishnaneupaney-mongo-production/myFirstDatabase?retryWrites=true&w=majority'
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
